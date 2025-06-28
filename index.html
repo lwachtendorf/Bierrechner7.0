@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Getränkekasse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Getränkekasse</h1>
+  <div id="total">0,00 €</div>
+
+  <div class="grid-utilities">
+    <div class="tile reset wide" onclick="reset()">Zurücksetzen</div>
+    <div class="tile pfand" onclick="add(-1.0)">
+      Pfand<br>–1,00 €
+      <span class="counter" id="count-pfand">0×</span>
+    </div>
+    <div class="tile pfandplus" onclick="add(1.0)">
+      Pfand<br>+1,00 €
+      <span class="counter" id="count-pfandplus">0×</span>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="tile wasser" onclick="addWithCount(1.5, 'wasser')">Wasser<br>1,50 €<span class="counter" id="count-wasser">0×</span></div>
+    <div class="tile softdrinks" onclick="addWithCount(2.0, 'softdrinks')">Softdrinks<br>2,00 €<span class="counter" id="count-softdrinks">0×</span></div>
+    <div class="tile bier" onclick="addWithCount(2.5, 'bier')">Bier<br>2,50 €<span class="counter" id="count-bier">0×</span></div>
+    <div class="tile alster" onclick="addWithCount(2.5, 'alster')">Alster<br>2,50 €<span class="counter" id="count-alster">0×</span></div>
+    <div class="tile springer" onclick="addWithCount(2.5, 'springer')">Springer-Cola<br>2,50 €<span class="counter" id="count-springer">0×</span></div>
+    <div class="tile kurze" onclick="addWithCount(1.0, 'kurze')">Kurze<br>1,00 €<span class="counter" id="count-kurze">0×</span></div>
+    <div class="tile osborn" onclick="addWithCount(3.0, 'osborn')">Osborn-Cola<br>3,00 €<span class="counter" id="count-osborn">0×</span></div>
+    <div class="tile sekt" onclick="addWithCount(2.0, 'sekt')">Sekt<br>2,00 €<span class="counter" id="count-sekt">0×</span></div>
+    <div class="tile osbornmisch wide" onclick="addWithCount(35.0, 'osbornmisch')">1 Fl. Osborn mit 2 Fl. Cola<br>35,00 €<span class="counter" id="count-osbornmisch">0×</span></div>
+    <div class="tile springermisch wide" onclick="addWithCount(30.0, 'springermisch')">1 Fl. Springer mit 2 Fl. Cola<br>30,00 €<span class="counter" id="count-springermisch">0×</span></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
